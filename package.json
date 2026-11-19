@@ -22,5 +22,8 @@
   "homepage": "https://github.com/DanielGranato/alura-express-mongodb-api#readme",
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
   }
 }
