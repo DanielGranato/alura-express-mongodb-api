@@ -2,5 +2,11 @@ import mongoose from "mongoose";
 
 process.loadEnvFile();
 
-mongoose.connect(process.env.DB_CONNECTION_STRING);
+async function conectaNaDatabase(){
+    mongoose.connect(process.env.DB_CONNECTION_STRING);
+    return mongoose.connection;
+}
+
+export default conectaNaDatabase;
+
 
