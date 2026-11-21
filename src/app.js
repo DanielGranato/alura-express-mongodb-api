@@ -1,6 +1,7 @@
 import express from "express";
 import conectaNaDatabase from "./config/dbConnect.js";
 import livrosRoutes from "./routes/livrosRoutes.js";
+import autoresRoutes from "./routes/autoresRoutes.js";
 
 const conexao = await conectaNaDatabase();
 
@@ -20,5 +21,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(livrosRoutes);
+app.use(autoresRoutes);
 
 export default app;
